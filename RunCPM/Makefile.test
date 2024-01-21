@@ -1,0 +1,14 @@
+
+
+parseopt_test: parseopt_test.o parseoptions_testsetup.o
+
+parseopt_test.o: parseopt_test.c parseoptions_testsetup.h cheat.h
+
+parseoptions_testsetup.o: \
+  parseoptions_testsetup.c parseoptions_testsetup.h \
+  parseoptions_vstudio.h
+
+
+clean:
+	rm -f parseopt_test
+	rm -f *.o
